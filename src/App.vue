@@ -1,20 +1,13 @@
 <script setup lang="ts">
-const ten: number = 10
-const hello: string = 'hello'
-const bool: boolean = true
-const obj: object = {
-  a: 10,
-}
-
-const link: string = `<a href="/">link</a>`
+const id: string = 'red'
+const newColor: string = 'blue'
+const greenColor: string = 'green'
 </script>
 
 <template>
-  <header>{{ ten }}</header>
-  <main>{{ hello }}</main>
-  <div>{{ bool }}</div>
-  <div v-html="link"></div>
-  <footer>{{ obj }}</footer>
+  <header :class="newColor"></header>
+  <main :id></main>
+  <div v-bind:class="greenColor"></div>
 </template>
 
 <style lang="scss" scoped></style>
