@@ -1,11 +1,20 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const ten: number = 10
+const hello: string = 'hello'
+const bool: boolean = true
+const obj: object = {
+  a: 10,
+}
+
+const link: string = `<a href="/">link</a>`
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <header>{{ ten }}</header>
+  <main>{{ hello }}</main>
+  <div>{{ bool }}</div>
+  <div v-html="link"></div>
+  <footer>{{ obj }}</footer>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped></style>
